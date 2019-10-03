@@ -40,5 +40,5 @@ func main() {
 	r.HandleFunc("/view/{id}", c.View).Methods("GET")
 	r.HandleFunc("/rc", c.Rc).Methods("POST")
 	fmt.Println("ready")
-	http.ListenAndServe(viper.GetString("port"), r)
+	http.ListenAndServe(viper.GetString("port_http"), r)
 }
